@@ -1,3 +1,5 @@
+<div class="card" style="width: 18rem; margin-bottom:1rem; margin-top:1rem;">
+<div class="card-body">
 <%= form_with model: [ @article, @article.comments.build ] do |form| %>
     <p>
       <%= form.label :commenter %><br>
@@ -15,3 +17,5 @@
   <%= form.select :status, ['public', 'private', 'archived'], selected: 'public' %>
     </p>
   <% end %>
+</div>
+</div>

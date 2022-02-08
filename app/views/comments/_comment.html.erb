@@ -1,13 +1,12 @@
 <% unless comment.archived? %>
-<p>
-<strong>Commenter:</strong>
-<%= comment.commenter %>
-</p>
+<div class="card" style="width: 18rem; margin-bottom:1rem; margin-top:1rem;">
+<div class="card-body">
+<h5 class="card-title">
+<%= comment.commenter %> </h5>
 
-<p>
-<strong>Comment:</strong>
-<%= comment.body %>
-</p>
+<p class= "card-text"><%= comment.body %></p>
+
+
 
 <p>
 <%= link_to "Destroy Comment", [comment.article, comment], data: {
@@ -15,4 +14,6 @@
               turbo_confirm: "Are you sure?"
             } %>
 </p>
+</div>
+</div>
 <% end %>

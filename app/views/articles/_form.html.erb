@@ -1,3 +1,6 @@
+
+<div class="card" style="width: 18rem; margin-bottom:1rem; margin-top:1rem;">
+<div class="card-body">
 <%= form_with model: article do |form| %>
     <div>
       <%= form.label :title %><br>
@@ -23,3 +26,6 @@
   <%= form.select :status, ['public', 'private', 'archived'], selected: 'public' %>
     </div>
   <% end %>
+
+  </div>
+    </div>

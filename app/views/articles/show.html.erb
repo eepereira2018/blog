@@ -1,16 +1,23 @@
-<h1><%= @article.title %></h1>
+<head>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
 
-<p><%= @article.body %></p>
-
-<ul>
-  <li><%= link_to "Edit", edit_article_path(@article) %></li>
-  <li><%= link_to "Destroy", article_path(@article), data: {
+<div class="card" style="width: 18rem; margin-bottom:1rem; margin-top:1rem;">
+<div class="card-body">
+<h5 class="card-title"><%= @article.title %> </h5>
+<p class= "card-text"><%= @article.body %></p>
+  <a href="#" class="card-link"><%= link_to "Destroy", article_path(@article), data: {
                     turbo_method: :delete,
                     turbo_confirm: "Are you sure?"
-                  } %></li>
-</ul>
+                  } %></a>
+    <a href="#" class="card-link"><%= link_to "Edit", edit_article_path(@article) %></a>
+</div>
+</div>
 
-<h2>Comments</h2>
+
+
+<h5>Comments</h5>
+
 <%= render @article.comments %>
 
 <h2>Add a comment:</h2>
